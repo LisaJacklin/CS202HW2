@@ -4,6 +4,13 @@
 // 2/17/2022
 
 #include <iostream>
+using std::cout;
+using std::endl;
+
+//use linked list class from STL (header <list>)
+#include <list>
+//in the main .cpp use CATCH.HPP to test class
+#include "catch.hpp"
 
 /*
 Requirements:
@@ -26,14 +33,23 @@ Insert and Find:
 
 print the list out.
 
-
 Notes: 
--use linked list class from STL (header <list>)
-- in the main .cpp use CATCH.HPP to test class
-- for Value Class, might want to base it on a them...
+ for Value Class, might want to base it on a them...
 
 */
+
+//this class needs to be tested by catch.hpp
+class listValues {
+    //now to add 6 fields to test a:
+    //queue
+    //stack
+    //insertion
+    //search linked list
+};
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << " start of main" << endl;
+
+    cout << "end of main " << endl;
 }
