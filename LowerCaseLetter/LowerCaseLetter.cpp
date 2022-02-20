@@ -34,10 +34,9 @@ void to_lower(char* s) {
 			s[i] = s[i] + 32;
 
 
-			cout << "adjusted to lower case: " << s[i];
+			cout << s[i];
 		}
-		else  cout << s[i];
-		
+		else  cout << s[i];	
 		++i;
 	}
 	cout << endl;
@@ -51,7 +50,6 @@ int main()
 	//this is the code that will be turned to lower case
 	//only the H and the W sould be messed with at all.	
 	string textToLower = " Hello World";
-	cout << "Original Text called" << endl;
 
 	//this should turn the string into constant chars 
 	//from here it should be ready to use in the function.
