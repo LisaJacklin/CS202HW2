@@ -9,6 +9,9 @@ using std::endl;
 
 //use linked list class from STL (header <list>)
 #include <list>
+#include <queue>
+#include <stack>
+
 //in the main .cpp use CATCH.HPP to test class
 #include "catch.hpp"
 
@@ -40,10 +43,19 @@ Notes:
 
 //this class needs to be tested by catch.hpp
 class listValues {
+public:
     //now to add 6 fields to test a:
     //queue
+    std::queue<int> myQueue;
+    //push a val to the back,
+    //pop a value from the front
+
     //stack
+    std::stack <int> myStack;
+
     //insertion
+    
+
     //search linked list
 };
 
