@@ -7,12 +7,11 @@
 using std::cout;
 using std::endl;
 
-#include <stdio.h>
 /*
 Requirements:
-- write a programs telling the order that different storage is layed out in memory
-
-- code, statoic data, free store, stack
+- write a programs telling the order that 
+  different storage is layed out in memory
+- static data, free store, stack
 
 */
 
@@ -24,9 +23,24 @@ void printPointer(int i) {
     std::cout << "&i = " << iptr << endl;
 }
 
+static int one;
+static int two;
+
 int main()
 {
     cout << "start of main" << endl;
+    //Static Data storage
+    //any data that remains unchanged but lasts the whole program
+   
+    cout << " Static Data" << endl;
+    printPointer(one);
+    printPointer(two);
+
+    
+    //free storage
+    //Stack storage
+   
+
 
     cout << "end of main" << endl;
 }

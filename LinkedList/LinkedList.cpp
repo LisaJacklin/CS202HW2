@@ -92,14 +92,16 @@ bool operator < (const Books& a, const Books& b) {
       //this push the values to the back of the list.
        Booksqueue.push_back(testCase);
        Booksqueue.push_back(one);
-      Booksqueue.push_back (two);
+       Booksqueue.push_back (two);
 
       //now to start testing the queue
+      //first in first out
       auto get = Booksqueue.begin();
       REQUIRE( (*get) == testCase);
 
       //test if item can be found
       auto found = find(Booksqueue.begin(), Booksqueue.end(), one);
+
       REQUIRE((*found) == one);
       Booksqueue.pop_front(); //pops value to front if found
 
@@ -112,14 +114,15 @@ bool operator < (const Books& a, const Books& b) {
       BooksStack.push_back(two);
       BooksStack.push_back(testCase);
 
+
       //now to start testing the stack
       //last in first out
-      auto get = BooksStack.end();
-      REQUIRE((*get) == testCase);
+     // auto get = BooksStack.end();
+      REQUIRE(( BooksStack.end() ) == testCase);
 
       //test if item can be found
-      auto found = find(Booksqueue.begin(), Booksqueue.end(), testCase);
-      REQUIRE((*found) == testCase);
+      //auto found = find(Booksqueue.begin(), Booksqueue.end(), testCase);
+      REQUIRE((Booksqueue.begin()) == one);
 
       BooksStack.pop_back();
 
@@ -130,6 +133,13 @@ bool operator < (const Books& a, const Books& b) {
       book.push_back(one);
       book.push_back(two);
       book.push_back(testCase);
+
+      //lastly to test finding and inserting
+   
+     
+
+      //REQUIRE(find);
+
    }
 
 
