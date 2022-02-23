@@ -59,21 +59,38 @@ public:
     }
 
 };
-//to be tested
 
+//test case with queue and stacks
+//need to keep a list for searching, inserting, and printing
    TEST_CASE("listTest")
-    {    //queue
-        std::queue<int> myQueue;
-        //push a val to the back,
-        //pop a value from the front
+    {    
+       //test values for each case
+       Books testCase;
+       Books one;
+       Books two;
 
-        //stack
-        std::stack <int> myStack;
+       //making a list out of the class called Booksqueue.
+       std::list <Books> Booksqueue;
+        
+      //this push the values to the back of the list.
+      Booksqueue.push_back(one);
+      Booksqueue.push_back (two);
+      Booksqueue.push_back(testCase);
 
-        //insertion
+    //now to do the same thing for a stack
+      std::list <Books> BooksStack;
 
+      BooksStack.push_back(one);
+      BooksStack.push_back(two);
+      BooksStack.push_back(testCase);
 
-        //search linked list
+    //Insert and Find
+    //i'll create a list called book to test inserting values and finding them.
+      std::list <Books> book;
+
+      book.push_back(one);
+      book.push_back(two);
+      book.push_back(testCase);
    }
 
 
