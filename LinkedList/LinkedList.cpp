@@ -112,6 +112,17 @@ bool operator < (const Books& a, const Books& b) {
       BooksStack.push_back(two);
       BooksStack.push_back(testCase);
 
+      //now to start testing the stack
+      //last in first out
+      auto get = BooksStack.end();
+      REQUIRE((*get) == testCase);
+
+      //test if item can be found
+      auto found = find(Booksqueue.begin(), Booksqueue.end(), testCase);
+      REQUIRE((*found) == testCase);
+
+      BooksStack.pop_back();
+
     //Insert and Find
     //i'll create a list called book to test inserting values and finding them.
       std::list <Books> book;
