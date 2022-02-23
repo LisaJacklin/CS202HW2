@@ -61,8 +61,8 @@ public:
 };
 //to be tested
 
-  //  TEST_CASE("listTest")
-   // {    //queue
+   TEST_CASE("listTest")
+    {    //queue
         std::queue<int> myQueue;
         //push a val to the back,
         //pop a value from the front
@@ -74,6 +74,6 @@ public:
 
 
         //search linked list
-  //  }
+   }
 
 
