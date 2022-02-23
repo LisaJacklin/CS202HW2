@@ -52,23 +52,28 @@ public:
     int year;
     int copies;
    
-    //queue
-    std::queue<int> myQueue;
-    //push a val to the back,
-    //pop a value from the front
+    //now something that uses these test fields:
+    //constructor
+    Books() : title(1), author(2), pages(342), price(15), year(2022) {
+        copies = 0;
+    }
 
-    //stack
-    std::stack <int> myStack;
-
-    //insertion
-    
-
-    //search linked list
 };
+//to be tested
 
-int main()
-{
-    cout << " start of main" << endl;
+  //  TEST_CASE("listTest")
+   // {    //queue
+        std::queue<int> myQueue;
+        //push a val to the back,
+        //pop a value from the front
 
-    cout << "end of main " << endl;
-}
+        //stack
+        std::stack <int> myStack;
+
+        //insertion
+
+
+        //search linked list
+  //  }
+
+
