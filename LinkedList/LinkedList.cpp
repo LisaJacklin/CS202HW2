@@ -9,8 +9,7 @@ using std::endl;
 
 //use linked list class from STL (header <list>)
 #include <list>
-#include <queue>
-#include <stack>
+#include <algorithm>
 
 //in the main .cpp use CATCH.HPP to test class
 #include "catch.hpp"
@@ -73,15 +72,16 @@ public:
        std::list <Books> Booksqueue;
         
       //this push the values to the back of the list.
-      Booksqueue.push_back(one);
+       Booksqueue.push_back(testCase);
+       Booksqueue.push_back(one);
       Booksqueue.push_back (two);
-      Booksqueue.push_back(testCase);
 
       //now to start testing the queue
       auto get = Booksqueue.begin();
 
-      REQUIRE( (*get) == one);
+      REQUIRE( (*get) == testCase);
 
+      auto found = find(Booksqueue.begin(), Booksqueue.end(), one);
 
     //now to do the same thing for a stack
       std::list <Books> BooksStack;
