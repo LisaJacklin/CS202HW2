@@ -40,7 +40,10 @@ int main()
     printPointer(a);
 
     //free storage
-
+    int* b = new int[1];
+    b[1] = 9;
+    cout << "Free Storage" << endl;
+    printPointer(b[1]);
    
 
 
