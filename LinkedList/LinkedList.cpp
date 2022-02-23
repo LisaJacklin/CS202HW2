@@ -3,6 +3,9 @@
 //CS 202 HW 2
 // 2/17/2022
 
+//in the main .cpp use CATCH.HPP to test class
+#include "catch.hpp"
+
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -10,9 +13,6 @@ using std::endl;
 //use linked list class from STL (header <list>)
 #include <list>
 #include <algorithm>
-
-//in the main .cpp use CATCH.HPP to test class
-#include "catch.hpp"
 
 /*
 Requirements:
@@ -59,9 +59,27 @@ public:
 
 };
 
+//now setting up bool operators so Catch.hpp can test with equality,inequality
+//think of lab 6!
+bool operator == (const Books& a, const Books& b) {
+    return a.title == b.title;
+}
+
+bool operator != (const Books& a, const Books& b) {
+    return a.title != b.title;
+}
+
+bool operator > (const Books& a, const Books& b) {
+    return a.title > b.title;
+}
+
+bool operator < (const Books& a, const Books& b) {
+    return a.title < b.title;
+}
+
 //test case with queue and stacks
 //need to keep a list for searching, inserting, and printing
-   TEST_CASE("listTest")
+   TEST_CASE("listTest", "[bookstest]")
     {    
        //test values for each case
        Books testCase;
@@ -78,10 +96,14 @@ public:
 
       //now to start testing the queue
       auto get = Booksqueue.begin();
-
       REQUIRE( (*get) == testCase);
 
+      //test if item can be found
       auto found = find(Booksqueue.begin(), Booksqueue.end(), one);
+      REQUIRE((*found) == one);
+      Booksqueue.pop_front(); //pops value to front if found
+
+      //and lastly, time to print these numbers
 
     //now to do the same thing for a stack
       std::list <Books> BooksStack;
