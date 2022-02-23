@@ -23,22 +23,24 @@ void printPointer(int i) {
     std::cout << "&i = " << iptr << endl;
 }
 
-static int one;
-static int two;
+
 
 int main()
 {
     cout << "start of main" << endl;
     //Static Data storage
     //any data that remains unchanged but lasts the whole program
-   
+    static int one;
     cout << " Static Data" << endl;
     printPointer(one);
-    printPointer(two);
 
-    
-    //free storage
     //Stack storage
+    int a = 7;
+    cout << "Stack Storage" << endl;
+    printPointer(a);
+
+    //free storage
+
    
 
 
