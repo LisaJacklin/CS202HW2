@@ -37,14 +37,21 @@ Insert and Find:
 print the list out.
 
 Notes: 
- for Value Class, might want to base it on a them...
+ for Value Class, might want to base it on a theme...
 
 */
 
 //this class needs to be tested by catch.hpp
-class listValues {
+class Books {
 public:
-    //now to add 6 fields to test a:
+    //now to add 6 fields to test    
+    int title;
+    int author;
+    int pages;
+    int price;
+    int year;
+    int copies;
+   
     //queue
     std::queue<int> myQueue;
     //push a val to the back,
