@@ -77,6 +77,12 @@ public:
       Booksqueue.push_back (two);
       Booksqueue.push_back(testCase);
 
+      //now to start testing the queue
+      auto get = Booksqueue.begin();
+
+      REQUIRE( (*get) == one);
+
+
     //now to do the same thing for a stack
       std::list <Books> BooksStack;
 
